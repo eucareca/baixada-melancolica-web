@@ -204,7 +204,7 @@ const Contato = () => {
                     <h3 className="font-semibold text-gray-900 mb-4">Localização</h3>
                     <div className="rounded-lg overflow-hidden border border-gray-200">
                       <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3459.4842885988!2d-53.812166!3d-29.687777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95040e6a5e3b0a0b%3A0x1d4b6e9f8f7b0f0a!2sEst%C3%A1dio%20Presidente%20Vargas!5e0!3m2!1spt!2sbr!4v1703123456789!5m2!1spt!2sbr"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1732.9784354718204!2d-53.82564832215861!3d-29.692030068907897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9503cc9ff7eb2bc3%3A0xacf8ae2e1e78b0cb!2sEst%C3%A1dio%20Presidente%20Vargas%20(Baixada%20Melanc%C3%B3lica)%20(Acesso%20Leste)!5e0!3m2!1spt-BR!2sbr!4v1751030838319!5m2!1spt-BR!2sbr"
                         width="100%"
                         height="250"
                         style={{ border: 0 }}

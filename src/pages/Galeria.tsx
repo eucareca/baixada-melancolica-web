@@ -6,43 +6,67 @@ import { X } from 'lucide-react';
 const Galeria = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  // Imagens de exemplo - podem ser facilmente substituídas/adicionadas
+  // Imagens reais do Inter-SM
   const galleryImages = [
     {
       id: 1,
-      src: "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*pAHJE3HmuHEttr8AZzl5kQ.jpeg",
-      alt: "Estádio Presidente Vargas - Baixada Melancólica",
+      src: "/lovable-uploads/a77279d9-b909-4365-bf7a-5bd03dd09a7f.png",
+      alt: "Estádio Presidente Vargas - Baixada Melancólica ao entardecer",
       title: "Baixada Melancólica"
     },
     {
       id: 2,
-      src: "https://images.unsplash.com/photo-1459865264687-595d652de67e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      alt: "Torcida do Inter-SM",
-      title: "Torcida Alvirrubra"
+      src: "/lovable-uploads/0dc75123-5bc2-4c75-8922-76a2b9a6d6f9.png",
+      alt: "Jovem torcedor do Inter-SM com a camisa do clube",
+      title: "Paixão Alvirrubra"
     },
     {
       id: 3,
-      src: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1793&q=80",
-      alt: "Jogadores em ação",
-      title: "Em Campo"
+      src: "/lovable-uploads/3b743f36-9f27-4e97-998f-1a09a0ff7261.png",
+      alt: "Torcida organizada do Inter-SM nas arquibancadas",
+      title: "Torcida Fanática"
     },
     {
       id: 4,
-      src: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      alt: "Troféus e conquistas",
-      title: "Conquistas"
+      src: "/lovable-uploads/c2d55b94-5307-4692-bc1f-b7abb807ae2f.png",
+      alt: "Lance de jogo no estádio com torcida lotada",
+      title: "Em Campo"
     },
     {
       id: 5,
-      src: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      alt: "Momentos históricos",
-      title: "História Viva"
+      src: "/lovable-uploads/1cbe6a7e-0869-4d8c-a050-d7297d42b76e.png",
+      alt: "Caravana de torcedores do Inter-SM em caminhada",
+      title: "Caravana Alvirrubra"
     },
     {
       id: 6,
-      src: "https://images.unsplash.com/photo-1522778119026-d647f0596c20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      alt: "Treinos e preparação",
-      title: "Preparação"
+      src: "/lovable-uploads/a1b23b85-632c-4a59-ba21-ed719c08c88d.png",
+      alt: "Arquibancada lotada com torcedores vibrando",
+      title: "Apoio Incondicional"
+    },
+    {
+      id: 7,
+      src: "/lovable-uploads/43ebdc07-752c-477e-aace-f66dd780de09.png",
+      alt: "Torcedor celebrando nas arquibancadas",
+      title: "Festa na Baixada"
+    },
+    {
+      id: 8,
+      src: "/lovable-uploads/d81bedc4-a1f7-4e75-811b-bfeba67800ab.png",
+      alt: "Grupo de torcedores uniformizados",
+      title: "Unidos pelo Inter"
+    },
+    {
+      id: 9,
+      src: "/lovable-uploads/deae274c-7dcc-4a24-872a-fbbe3127af28.png",
+      alt: "Torcedor comemorando com bandeira do clube",
+      title: "Alegria Alvirrubra"
+    },
+    {
+      id: 10,
+      src: "/lovable-uploads/83cbb59b-d6c5-472f-aa1d-87a490e29e2b.png",
+      alt: "Jogo no estádio com arquibancada cheia",
+      title: "Casa Cheia"
     }
   ];
 

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
 import { X } from 'lucide-react';
@@ -67,6 +66,36 @@ const Galeria = () => {
       src: "/lovable-uploads/83cbb59b-d6c5-472f-aa1d-87a490e29e2b.png",
       alt: "Jogo no estádio com arquibancada cheia",
       title: "Casa Cheia"
+    },
+    {
+      id: 11,
+      src: "/lovable-uploads/a04d9764-fea7-4ebe-8afa-1e482a8a4049.png",
+      alt: "Jogadores do Inter-SM se concentrando antes da partida com faixa dos fanáticos ao fundo",
+      title: "Concentração dos Fanáticos"
+    },
+    {
+      id: 12,
+      src: "/lovable-uploads/2d443690-db76-4062-ab3c-323226c49130.png",
+      alt: "Sede do E.C. Internacional - fachada histórica do clube",
+      title: "Casa do Inter"
+    },
+    {
+      id: 13,
+      src: "/lovable-uploads/949981bf-2043-4ac8-a6b7-0978f10b7716.png",
+      alt: "Torcedores alvirrubros em excursão comemorando no estádio do Ypiranga",
+      title: "Festa em Terras Gaúchas"
+    },
+    {
+      id: 14,
+      src: "/lovable-uploads/a2b54cde-5d51-46cf-972a-84bfa86fef80.png",
+      alt: "Torcida acompanhando o jogo ao entardecer na Baixada Melancólica",
+      title: "Entardecer na Baixada"
+    },
+    {
+      id: 15,
+      src: "/lovable-uploads/42271e8a-ed09-45f7-927c-ecafc6652ed1.png",
+      alt: "Pôr do sol dourado no estádio Presidente Vargas durante partida do Inter-SM",
+      title: "Ouro na Baixada"
     }
   ];
 

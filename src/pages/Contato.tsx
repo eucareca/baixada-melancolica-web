@@ -166,30 +166,53 @@ const Contato = () => {
                       <span className="text-white font-bold">@</span>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900 mb-4">Redes Sociais</h3>
+                      <h3 className="font-semibold text-gray-900 mb-4">Redes Sociais Oficiais</h3>
                       <div className="flex space-x-4">
                         <a
-                          href="#"
+                          href="https://www.facebook.com/intersmoficial"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="bg-gray-100 p-3 rounded-lg hover:bg-club-red hover:text-white transition-colors duration-200"
                           aria-label="Facebook"
                         >
                           <Facebook size={20} />
                         </a>
                         <a
-                          href="#"
+                          href="https://www.instagram.com/intersmoficial/"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="bg-gray-100 p-3 rounded-lg hover:bg-club-red hover:text-white transition-colors duration-200"
                           aria-label="Instagram"
                         >
                           <Instagram size={20} />
                         </a>
                         <a
-                          href="#"
+                          href="https://x.com/intersmoficial"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="bg-gray-100 p-3 rounded-lg hover:bg-club-red hover:text-white transition-colors duration-200"
                           aria-label="Twitter"
                         >
                           <Twitter size={20} />
                         </a>
                       </div>
+                    </div>
+                  </div>
+
+                  {/* Mapa */}
+                  <div className="mt-8">
+                    <h3 className="font-semibold text-gray-900 mb-4">Localização</h3>
+                    <div className="rounded-lg overflow-hidden border border-gray-200">
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3459.4842885988!2d-53.812166!3d-29.687777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95040e6a5e3b0a0b%3A0x1d4b6e9f8f7b0f0a!2sEst%C3%A1dio%20Presidente%20Vargas!5e0!3m2!1spt!2sbr!4v1703123456789!5m2!1spt!2sbr"
+                        width="100%"
+                        height="250"
+                        style={{ border: 0 }}
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title="Localização do Estádio Presidente Vargas"
+                      />
                     </div>
                   </div>
                 </div>

@@ -22,8 +22,12 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-club-red rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">I</span>
+            <div className="w-12 h-12 flex items-center justify-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/pt/thumb/2/28/InterSM2019.png/120px-InterSM2019.png"
+                alt="Esporte Clube Internacional de Santa Maria"
+                className="w-10 h-10 object-contain"
+              />
             </div>
             <span className="font-montserrat font-bold text-club-red hidden sm:block">
               Inter-SM

@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Layout from '../components/Layout';
 
 const Index = () => {
@@ -86,18 +87,18 @@ const Index = () => {
             Conheça mais sobre os 96 anos de tradição, paixão e conquistas do clube que é o verdadeiro Time do Coração do Rio Grande.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/historia"
+            <Link
+              to="/historia"
               className="bg-white text-club-red px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors duration-200"
             >
               Conheça Nossa História
-            </a>
-            <a
-              href="/contato"
+            </Link>
+            <Link
+              to="/contato"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-club-red transition-colors duration-200"
             >
               Entre em Contato
-            </a>
+            </Link>
           </div>
         </div>
       </section>

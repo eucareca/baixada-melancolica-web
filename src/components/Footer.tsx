@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Facebook, Instagram, Twitter } from 'lucide-react';
+import { Facebook, Instagram } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -22,25 +22,39 @@ const Footer = () => {
           {/* Redes Sociais */}
           <div className="flex justify-center space-x-6 mb-6">
             <a
-              href="#"
+              href="https://www.facebook.com/intersmoficial"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-600 hover:text-club-red transition-colors duration-200"
               aria-label="Facebook"
             >
               <Facebook size={24} />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/intersmoficial/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-600 hover:text-club-red transition-colors duration-200"
               aria-label="Instagram"
             >
               <Instagram size={24} />
             </a>
             <a
-              href="#"
+              href="https://x.com/intersmoficial"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-600 hover:text-club-red transition-colors duration-200"
-              aria-label="Twitter"
+              aria-label="X (Twitter)"
             >
-              <Twitter size={24} />
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
             </a>
           </div>
 

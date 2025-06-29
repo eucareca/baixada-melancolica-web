@@ -24,7 +24,7 @@ const Header = () => {
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-12 h-12 flex items-center justify-center">
               <img
-                src="https://upload.wikimedia.org/wikipedia/pt/thumb/2/28/InterSM2019.png/120px-InterSM2019.png"
+                src="/lovable-uploads/b3ad882d-dfb1-4ece-bbc8-b9bb7f7ddbd7.png"
                 alt="Esporte Clube Internacional de Santa Maria"
                 className="w-10 h-10 object-contain"
               />

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Layout from '../components/Layout';
 import { X } from 'lucide-react';
 
@@ -160,12 +161,12 @@ const Galeria = () => {
                 <p className="text-gray-500 mb-6">
                   Ajude a construir nossa galeria com momentos especiais do Inter-SM
                 </p>
-                <a
-                  href="/contato"
+                <Link
+                  to="/contato"
                   className="inline-block bg-club-red text-white px-6 py-3 rounded-lg font-medium hover:bg-club-red-dark transition-colors duration-200"
                 >
                   Entre em Contato
-                </a>
+                </Link>
               </div>
             </div>
           </div>

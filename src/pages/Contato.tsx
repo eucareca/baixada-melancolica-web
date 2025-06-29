@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
-import { Facebook, Instagram, Mail, MapPin, Phone } from 'lucide-react';
+import { Facebook, Instagram, Mail, MapPin } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const Contato = () => {
@@ -23,12 +23,17 @@ const Contato = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Aqui seria implementada a lógica de envio do formulário
-    console.log('Dados do formulário:', formData);
+    // Criar link mailto para enviar diretamente para o e-mail
+    const subject = encodeURIComponent('Contato pelo site do Inter-SM');
+    const body = encodeURIComponent(`Nome: ${formData.nome}\nE-mail: ${formData.email}\n\nMensagem:\n${formData.mensagem}`);
+    const mailtoLink = `mailto:torcidaalvirrubra@gmail.com?subject=${subject}&body=${body}`;
+    
+    // Abrir cliente de e-mail
+    window.location.href = mailtoLink;
     
     toast({
-      title: "Mensagem enviada!",
-      description: "Obrigado pelo contato. Responderemos em breve.",
+      title: "Mensagem preparada!",
+      description: "Seu cliente de e-mail será aberto para enviar a mensagem.",
     });
 
     // Limpar formulário após envio
@@ -137,10 +142,10 @@ const Contato = () => {
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-2">E-mail Oficial</h3>
                       <a
-                        href="mailto:torcida.alvirrubra@gmail.com"
+                        href="mailto:torcidaalvirrubra@gmail.com"
                         className="text-club-red hover:text-club-red-dark transition-colors duration-200"
                       >
-                        torcida.alvirrubra@gmail.com
+                        torcidaalvirrubra@gmail.com
                       </a>
                     </div>
                   </div>

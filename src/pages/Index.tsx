@@ -1,9 +1,30 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout';
+import { Calendar, MapPin, Clock } from 'lucide-react';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 
 const Index = () => {
+  // Próximo jogo destacado
+  const proximoJogo = {
+    data: '2025-01-15',
+    horario: '16:00',
+    casa: 'Inter-SM',
+    visitante: 'Grêmio Santanense',
+    local: 'Estádio Presidente Vargas',
+    cidade: 'Santa Maria',
+    competicao: 'Campeonato Gaúcho 2025'
+  };
+
+  const formatarData = (data: string) => {
+    return new Date(data).toLocaleDateString('pt-BR', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -26,6 +47,72 @@ const Index = () => {
                 Sempre avante unidos iremos
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Próximo Jogo */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-club-red mb-4">
+              Próximo Jogo
+            </h2>
+            <p className="text-xl text-gray-600">
+              Não perca o próximo confronto do Inter-SM
+            </p>
+          </div>
+          
+          <div className="max-w-2xl mx-auto">
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader className="text-center pb-3">
+                <span className="text-sm text-gray-500 font-medium">
+                  {proximoJogo.competicao}
+                </span>
+              </CardHeader>
+              <CardContent>
+                <div className="text-center mb-6">
+                  <div className="text-lg text-gray-600 mb-2">
+                    {formatarData(proximoJogo.data)}
+                  </div>
+                  <div className="flex items-center justify-center text-club-red mb-4">
+                    <Clock size={20} className="mr-2" />
+                    <span className="font-bold text-xl">{proximoJogo.horario}</span>
+                  </div>
+                </div>
+                
+                <div className="flex items-center justify-between mb-6">
+                  <div className="text-center flex-1">
+                    <div className="font-bold text-2xl text-club-red mb-2">
+                      {proximoJogo.casa}
+                    </div>
+                    <div className="text-sm text-gray-600">Casa</div>
+                  </div>
+                  <div className="mx-6 text-3xl font-bold text-gray-400">VS</div>
+                  <div className="text-center flex-1">
+                    <div className="font-bold text-2xl text-gray-800 mb-2">
+                      {proximoJogo.visitante}
+                    </div>
+                    <div className="text-sm text-gray-600">Visitante</div>
+                  </div>
+                </div>
+                
+                <div className="flex items-center justify-center text-gray-600 mb-6">
+                  <MapPin size={18} className="mr-2" />
+                  <span className="text-lg">{proximoJogo.local}, {proximoJogo.cidade}</span>
+                </div>
+                
+                <div className="text-center">
+                  <Link
+                    to="/jogos"
+                    className="inline-flex items-center space-x-2 bg-club-red text-white px-6 py-3 rounded-lg font-medium hover:bg-club-red-dark transition-colors duration-200"
+                  >
+                    <Calendar size={18} />
+                    <span>Ver Todos os Jogos</span>
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

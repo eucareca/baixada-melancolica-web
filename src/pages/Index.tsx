@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout';
@@ -5,15 +6,15 @@ import { Calendar, MapPin, Clock } from 'lucide-react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 
 const Index = () => {
-  // Próximo jogo destacado
+  // Próximo jogo real do Inter-SM (próximo da tabela atual)
   const proximoJogo = {
-    data: '2025-01-15',
+    data: '2025-07-13',
     horario: '16:00',
     casa: 'Inter-SM',
-    visitante: 'Grêmio Santanense',
+    visitante: 'Santa Cruz',
     local: 'Estádio Presidente Vargas',
     cidade: 'Santa Maria',
-    competicao: 'Campeonato Gaúcho 2025'
+    competicao: 'Campeonato Gaúcho A2 2025'
   };
 
   const formatarData = (data: string) => {

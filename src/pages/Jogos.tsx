@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Layout from '../components/Layout';
-import { Calendar, MapPin, Clock, Trophy } from 'lucide-react';
+import { Calendar, MapPin, Clock, Trophy, Ticket, Youtube } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 
@@ -15,7 +15,7 @@ const Jogos = () => {
       casa: 'Inter-SM',
       visitante: 'Santa Cruz',
       local: 'Estádio Presidente Vargas',
-      cidade: 'Santa Cruz do Sul',
+      cidade: 'Santa Maria',
       competicao: 'Campeonato Gaúcho A2 2025',
       rodada: '11ª Rodada'
     },
@@ -81,6 +81,36 @@ const Jogos = () => {
       month: 'long',
       day: 'numeric'
     });
+  };
+
+  const renderLinkJogo = (jogo: any) => {
+    const isJogoEmCasa = jogo.casa === 'Inter-SM' && jogo.cidade === 'Santa Maria';
+    
+    if (isJogoEmCasa) {
+      return (
+        <a
+          href="https://intersm.eleventickets.com/#!/home"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center space-x-2 bg-club-red text-white px-4 py-2 rounded-lg font-medium hover:bg-club-red-dark transition-colors duration-200 text-sm"
+        >
+          <Ticket size={16} />
+          <span>Ingressos</span>
+        </a>
+      );
+    } else {
+      return (
+        <a
+          href={`https://www.youtube.com/results?search_query=${jogo.casa}+futebol`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center space-x-2 bg-red-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-red-700 transition-colors duration-200 text-sm"
+        >
+          <Youtube size={16} />
+          <span>YouTube</span>
+        </a>
+      );
+    }
   };
 
   return (
@@ -176,9 +206,13 @@ const Jogos = () => {
                     </div>
                   </div>
                   
-                  <div className="flex items-center justify-center text-sm text-gray-600">
+                  <div className="flex items-center justify-center text-sm text-gray-600 mb-4">
                     <MapPin size={14} className="mr-1" />
                     <span>{jogo.local}, {jogo.cidade}</span>
+                  </div>
+                  
+                  <div className="text-center">
+                    {renderLinkJogo(jogo)}
                   </div>
                 </CardContent>
               </Card>

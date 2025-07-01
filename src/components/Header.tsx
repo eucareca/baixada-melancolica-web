@@ -17,6 +17,12 @@ const Header = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
+  const handleMobileMenuClick = () => {
+    setIsMenuOpen(false);
+    // Scroll para o topo da página
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 bg-white shadow-lg z-50">
       <div className="container mx-auto px-4">
@@ -84,7 +90,7 @@ const Header = () => {
                       ? 'text-club-red'
                       : 'text-gray-700 hover:text-club-red'
                   }`}
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={handleMobileMenuClick}
                 >
                   {item.name}
                 </Link>
@@ -94,7 +100,7 @@ const Header = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 bg-club-red text-white px-4 py-2 rounded-lg font-medium hover:bg-club-red-dark transition-colors duration-200 w-fit"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={handleMobileMenuClick}
               >
                 <Ticket size={16} />
                 <span>Ingressos</span>

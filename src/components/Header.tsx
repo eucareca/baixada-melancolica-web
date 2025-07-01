@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Ticket } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,7 +35,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex items-center space-x-8">
             {navigationItems.map((item) => (
               <Link
                 key={item.path}
@@ -49,6 +49,16 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
+            
+            <a
+              href="https://intersm.eleventickets.com/#!/home"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 bg-club-red text-white px-4 py-2 rounded-lg font-medium hover:bg-club-red-dark transition-colors duration-200"
+            >
+              <Ticket size={16} />
+              <span>Ingressos</span>
+            </a>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -78,6 +88,16 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
+              <a
+                href="https://intersm.eleventickets.com/#!/home"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 bg-club-red text-white px-4 py-2 rounded-lg font-medium hover:bg-club-red-dark transition-colors duration-200 w-fit"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <Ticket size={16} />
+                <span>Ingressos</span>
+              </a>
             </nav>
           </div>
         )}

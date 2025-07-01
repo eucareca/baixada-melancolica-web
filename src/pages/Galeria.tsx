@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout';
@@ -97,6 +98,66 @@ const Galeria = () => {
       src: "/lovable-uploads/42271e8a-ed09-45f7-927c-ecafc6652ed1.png",
       alt: "Pôr do sol dourado no estádio Presidente Vargas durante partida do Inter-SM",
       title: "Ouro na Baixada"
+    },
+    {
+      id: 16,
+      src: "/lovable-uploads/4630b66f-cc19-43c5-bfbf-4dc23eb69203.png",
+      alt: "Vista panorâmica do campo durante uma partida na Baixada Melancólica",
+      title: "Partida na Baixada"
+    },
+    {
+      id: 17,
+      src: "/lovable-uploads/49ff7771-d37e-47b4-bd22-7d7e80f738c8.png",
+      alt: "Galeria de fotos históricas do Inter-SM na sede do clube",
+      title: "Memórias Alvirrubras"
+    },
+    {
+      id: 18,
+      src: "/lovable-uploads/746ba259-1ed7-4b76-91eb-9f7f783bdb66.png",
+      alt: "Torcedores assistindo ao jogo das arquibancadas laterais",
+      title: "Acompanhando de Perto"
+    },
+    {
+      id: 19,
+      src: "/lovable-uploads/897acdae-4841-4789-afa0-8b034744306e.png",
+      alt: "Lance de jogo com jogadores do Inter-SM em ação no campo",
+      title: "Jogada Alvirrubra"
+    },
+    {
+      id: 20,
+      src: "/lovable-uploads/f58ffdb7-e351-4277-9cd7-ee6d2ef7a0f4.png",
+      alt: "Torcida apoiando o time durante a partida",
+      title: "Apoio da Arquibancada"
+    },
+    {
+      id: 21,
+      src: "/lovable-uploads/bb9203f4-0935-4f8d-8fa1-724802c7b1fa.png",
+      alt: "Vista artística através da rede do gol durante o jogo",
+      title: "Através das Redes"
+    },
+    {
+      id: 22,
+      src: "/lovable-uploads/15257b4f-7886-4ee0-9265-682a7b4165ba.png",
+      alt: "Trave do gol com vista do estádio ao fundo",
+      title: "Nos Detalhes do Jogo"
+    },
+    {
+      id: 23,
+      src: "/lovable-uploads/1a221e76-7dc1-4d3e-beae-668c7902ae40.png",
+      alt: "Torcedores escalando a grade para apoiar melhor o time",
+      title: "Paixão sem Limites"
+    },
+    {
+      id: 24,
+      src: "/lovable-uploads/05777081-893c-4f47-8b9d-87904b72fd93.png",
+      alt: "Vista do estádio Presidente Vargas durante o entardecer",
+      title: "Fim de Tarde na Baixada"
+    },
+    {
+      id: 25,
+      src: "/lovable-uploads/4fa79d63-c008-4dea-ac5f-08afa834c7b5.png",
+      alt: "Jogadores do Inter-SM comemorando conquista com troféu",
+      title: "Glória Alvirrubra"
     }
   ];
 

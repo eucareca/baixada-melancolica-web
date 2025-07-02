@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout';
-import { Calendar, MapPin, Clock } from 'lucide-react';
+import { Calendar, MapPin, Clock, Youtube } from 'lucide-react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 
 const Index = () => {
@@ -180,6 +180,13 @@ const Index = () => {
               className="bg-white text-club-red px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors duration-200"
             >
               Conheça Nossa História
+            </Link>
+            <Link
+              to="/videos"
+              className="flex items-center justify-center space-x-2 border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-club-red transition-colors duration-200"
+            >
+              <Youtube size={20} />
+              <span>Assista aos Vídeos</span>
             </Link>
             <Link
               to="/contato"

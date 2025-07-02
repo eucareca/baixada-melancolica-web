@@ -9,6 +9,7 @@ import Historia from "./pages/Historia";
 import Galeria from "./pages/Galeria";
 import Contato from "./pages/Contato";
 import Jogos from "./pages/Jogos";
+import Videos from "./pages/Videos";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/historia" element={<Historia />} />
           <Route path="/galeria" element={<Galeria />} />
           <Route path="/jogos" element={<Jogos />} />
+          <Route path="/videos" element={<Videos />} />
           <Route path="/contato" element={<Contato />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

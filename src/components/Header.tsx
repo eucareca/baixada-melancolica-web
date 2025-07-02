@@ -1,6 +1,7 @@
+
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Ticket, Home, History, Images, Trophy, Phone } from 'lucide-react';
+import { Menu, X, Ticket, Home, History, Images, Trophy, Phone, Youtube } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,6 +12,7 @@ const Header = () => {
     { name: 'História', path: '/historia', icon: History },
     { name: 'Galeria', path: '/galeria', icon: Images },
     { name: 'Jogos', path: '/jogos', icon: Trophy },
+    { name: 'Vídeos', path: '/videos', icon: Youtube },
     { name: 'Contato', path: '/contato', icon: Phone },
   ];
 

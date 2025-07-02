@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout';
+import LEDBanner from '../components/LEDBanner';
 import { Calendar, MapPin, Clock, Youtube } from 'lucide-react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 
@@ -28,6 +28,9 @@ const Index = () => {
 
   return (
     <Layout>
+      {/* LED Banner */}
+      <LEDBanner />
+
       {/* Hero Section */}
       <section className="relative">
         <div className="w-full h-[70vh] overflow-hidden">

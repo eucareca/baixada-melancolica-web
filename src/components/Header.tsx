@@ -49,10 +49,10 @@ const Header = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg border-2 font-medium transition-colors duration-200 ${
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-colors duration-200 ${
                     isActive(item.path)
-                      ? 'border-club-red bg-club-red text-white'
-                      : 'border-club-red text-club-red hover:bg-club-red hover:text-white'
+                      ? 'bg-club-red text-white'
+                      : 'bg-club-red text-white hover:bg-club-red-dark'
                   }`}
                 >
                   <IconComponent size={16} />
@@ -65,7 +65,7 @@ const Header = () => {
               href="https://intersm.eleventickets.com/#!/home"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-2 bg-club-red text-white px-4 py-2 rounded-lg font-medium hover:bg-club-red-dark transition-colors duration-200 border-2 border-club-red"
+              className="flex items-center space-x-2 bg-club-red text-white px-4 py-2 rounded-lg font-medium hover:bg-club-red-dark transition-colors duration-200"
             >
               <Ticket size={16} />
               <span>Ingressos</span>
@@ -91,10 +91,10 @@ const Header = () => {
                   <Link
                     key={item.path}
                     to={item.path}
-                    className={`flex items-center space-x-2 px-4 py-2 rounded-lg border-2 font-medium transition-colors duration-200 w-fit ${
+                    className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-colors duration-200 w-fit ${
                       isActive(item.path)
-                        ? 'border-club-red bg-club-red text-white'
-                        : 'border-club-red text-club-red hover:bg-club-red hover:text-white'
+                        ? 'bg-club-red text-white'
+                        : 'bg-club-red text-white hover:bg-club-red-dark'
                     }`}
                     onClick={handleMobileMenuClick}
                   >
@@ -107,7 +107,7 @@ const Header = () => {
                 href="https://intersm.eleventickets.com/#!/home"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 bg-club-red text-white px-4 py-2 rounded-lg font-medium hover:bg-club-red-dark transition-colors duration-200 w-fit border-2 border-club-red"
+                className="flex items-center space-x-2 bg-club-red text-white px-4 py-2 rounded-lg font-medium hover:bg-club-red-dark transition-colors duration-200 w-fit"
                 onClick={handleMobileMenuClick}
               >
                 <Ticket size={16} />

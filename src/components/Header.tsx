@@ -1,18 +1,18 @@
 
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Ticket } from 'lucide-react';
+import { Menu, X, Ticket, Home, History, Images, Trophy, Phone } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
   const navigationItems = [
-    { name: 'Início', path: '/' },
-    { name: 'História', path: '/historia' },
-    { name: 'Galeria', path: '/galeria' },
-    { name: 'Jogos', path: '/jogos' },
-    { name: 'Contato', path: '/contato' },
+    { name: 'Início', path: '/', icon: Home },
+    { name: 'História', path: '/historia', icon: History },
+    { name: 'Galeria', path: '/galeria', icon: Images },
+    { name: 'Jogos', path: '/jogos', icon: Trophy },
+    { name: 'Contato', path: '/contato', icon: Phone },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -42,26 +42,30 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navigationItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`font-medium transition-colors duration-200 ${
-                  isActive(item.path)
-                    ? 'text-club-red border-b-2 border-club-red'
-                    : 'text-gray-700 hover:text-club-red'
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
+          <nav className="hidden md:flex items-center space-x-4">
+            {navigationItems.map((item) => {
+              const IconComponent = item.icon;
+              return (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg border-2 font-medium transition-colors duration-200 ${
+                    isActive(item.path)
+                      ? 'border-club-red bg-club-red text-white'
+                      : 'border-club-red text-club-red hover:bg-club-red hover:text-white'
+                  }`}
+                >
+                  <IconComponent size={16} />
+                  <span>{item.name}</span>
+                </Link>
+              );
+            })}
             
             <a
               href="https://intersm.eleventickets.com/#!/home"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-2 bg-club-red text-white px-4 py-2 rounded-lg font-medium hover:bg-club-red-dark transition-colors duration-200"
+              className="flex items-center space-x-2 bg-club-red text-white px-4 py-2 rounded-lg font-medium hover:bg-club-red-dark transition-colors duration-200 border-2 border-club-red"
             >
               <Ticket size={16} />
               <span>Ingressos</span>
@@ -80,26 +84,30 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t">
-            <nav className="flex flex-col space-y-4">
-              {navigationItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  className={`font-medium transition-colors duration-200 ${
-                    isActive(item.path)
-                      ? 'text-club-red'
-                      : 'text-gray-700 hover:text-club-red'
-                  }`}
-                  onClick={handleMobileMenuClick}
-                >
-                  {item.name}
-                </Link>
-              ))}
+            <nav className="flex flex-col space-y-3">
+              {navigationItems.map((item) => {
+                const IconComponent = item.icon;
+                return (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    className={`flex items-center space-x-2 px-4 py-2 rounded-lg border-2 font-medium transition-colors duration-200 w-fit ${
+                      isActive(item.path)
+                        ? 'border-club-red bg-club-red text-white'
+                        : 'border-club-red text-club-red hover:bg-club-red hover:text-white'
+                    }`}
+                    onClick={handleMobileMenuClick}
+                  >
+                    <IconComponent size={16} />
+                    <span>{item.name}</span>
+                  </Link>
+                );
+              })}
               <a
                 href="https://intersm.eleventickets.com/#!/home"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 bg-club-red text-white px-4 py-2 rounded-lg font-medium hover:bg-club-red-dark transition-colors duration-200 w-fit"
+                className="flex items-center space-x-2 bg-club-red text-white px-4 py-2 rounded-lg font-medium hover:bg-club-red-dark transition-colors duration-200 w-fit border-2 border-club-red"
                 onClick={handleMobileMenuClick}
               >
                 <Ticket size={16} />

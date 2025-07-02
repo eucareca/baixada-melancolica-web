@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Ticket, Home, History, Images, Trophy, Phone } from 'lucide-react';
@@ -19,8 +18,10 @@ const Header = () => {
 
   const handleMobileMenuClick = () => {
     setIsMenuOpen(false);
-    // Scroll para o topo da página
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Aguarda um pequeno delay para garantir que a navegação ocorra antes do scroll
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
   };
 
   return (

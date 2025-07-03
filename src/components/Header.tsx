@@ -44,6 +44,11 @@ const Header = () => {
             </span>
           </Link>
 
+          {/* #VAMOSSUBIRINTER - Centralizado */}
+          <div className="hidden md:block text-club-red font-black text-sm font-mono tracking-widest transform -rotate-1 px-2 py-1 border border-club-red border-dashed bg-white shadow-sm">
+            #VAMOSSUBIRINTER
+          </div>
+
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-2">
             {navigationItems.map((item) => {
@@ -73,11 +78,6 @@ const Header = () => {
               <Ticket size={14} />
               <span>Ingressos</span>
             </a>
-
-            {/* #VAMOSSUBIRINTER */}
-            <div className="ml-4 text-club-red font-bold text-lg font-mono tracking-wider">
-              #VAMOSSUBIRINTER
-            </div>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -94,7 +94,7 @@ const Header = () => {
           <div className="md:hidden py-4 border-t">
             {/* Mobile #VAMOSSUBIRINTER */}
             <div className="text-center mb-4">
-              <span className="text-club-red font-bold text-lg font-mono tracking-wider">
+              <span className="text-club-red font-black text-sm font-mono tracking-widest transform -rotate-1 inline-block px-2 py-1 border border-club-red border-dashed bg-white shadow-sm">
                 #VAMOSSUBIRINTER
               </span>
             </div>

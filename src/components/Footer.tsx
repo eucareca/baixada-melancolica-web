@@ -10,6 +10,13 @@ const Footer = () => {
     <footer className="bg-gray-50 border-t">
       <div className="container mx-auto px-4 py-8">
         <div className="text-center">
+          {/* Selo de Site Não Oficial */}
+          <div className="mb-6">
+            <div className="inline-block bg-club-red text-white px-4 py-2 rounded-lg font-bold text-sm shadow-lg border-2 border-club-red transform -rotate-2">
+              SITE FEITO POR UM FÃ, SITE NÃO OFICIAL
+            </div>
+          </div>
+
           {/* Logo/Nome do Clube */}
           <div className="mb-4">
             <h3 className="font-montserrat font-bold text-2xl club-text-gradient mb-2">

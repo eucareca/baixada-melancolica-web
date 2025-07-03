@@ -45,20 +45,20 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-4">
+          <nav className="hidden md:flex items-center space-x-2">
             {navigationItems.map((item) => {
               const IconComponent = item.icon;
               return (
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-colors duration-200 ${
+                  className={`flex items-center space-x-1 px-3 py-2 rounded-lg font-medium transition-colors duration-200 text-sm ${
                     isActive(item.path)
                       ? 'bg-club-red text-white'
                       : 'bg-club-red text-white hover:bg-club-red-dark'
                   }`}
                 >
-                  <IconComponent size={16} />
+                  <IconComponent size={14} />
                   <span>{item.name}</span>
                 </Link>
               );
@@ -68,11 +68,16 @@ const Header = () => {
               href="https://intersm.eleventickets.com/#!/home"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-2 bg-club-red text-white px-4 py-2 rounded-lg font-medium hover:bg-club-red-dark transition-colors duration-200"
+              className="flex items-center space-x-1 bg-club-red text-white px-3 py-2 rounded-lg font-medium hover:bg-club-red-dark transition-colors duration-200 text-sm"
             >
-              <Ticket size={16} />
+              <Ticket size={14} />
               <span>Ingressos</span>
             </a>
+
+            {/* #VAMOSSUBIRINTER */}
+            <div className="ml-4 text-club-red font-bold text-lg font-mono tracking-wider">
+              #VAMOSSUBIRINTER
+            </div>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -87,6 +92,13 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t">
+            {/* Mobile #VAMOSSUBIRINTER */}
+            <div className="text-center mb-4">
+              <span className="text-club-red font-bold text-lg font-mono tracking-wider">
+                #VAMOSSUBIRINTER
+              </span>
+            </div>
+            
             <nav className="flex flex-col space-y-3">
               {navigationItems.map((item) => {
                 const IconComponent = item.icon;

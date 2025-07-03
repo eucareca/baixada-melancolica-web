@@ -12,8 +12,13 @@ const Footer = () => {
         <div className="text-center">
           {/* Selo de Site Não Oficial */}
           <div className="mb-6">
-            <div className="inline-block bg-club-red text-white px-4 py-2 rounded-lg font-bold text-sm shadow-lg border-2 border-club-red transform -rotate-2">
-              SITE FEITO POR UM FÃ, SITE NÃO OFICIAL
+            <div className="inline-block bg-club-red text-white w-32 h-32 rounded-full flex items-center justify-center font-bold text-xs shadow-lg border-4 border-club-red transform -rotate-12 leading-tight">
+              <div className="text-center">
+                <div>SITE FEITO</div>
+                <div>POR UM</div>
+                <div>TORCEDOR</div>
+                <div className="mt-1 text-[10px]">SITE NÃO OFICIAL</div>
+              </div>
             </div>
           </div>
 

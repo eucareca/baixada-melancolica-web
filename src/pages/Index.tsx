@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout';
@@ -5,7 +6,7 @@ import { Calendar, MapPin, Clock, Youtube } from 'lucide-react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 
 const Index = () => {
-  // Próximo jogo real do Inter-SM (próximo da tabela atual)
+  // Próximo jogo sincronizado com a página de jogos
   const proximoJogo = {
     data: '2025-07-13',
     horario: '16:00',
